@@ -22,7 +22,7 @@ spec:
         kind: Template
     spec:
       containers:
-      - name: sample-flask-app_db
+      - name: sample-flask-app-db
         image: astenmco/sample-flask-app_db:0.1.0
         ports:
           - containerPort: 5432
