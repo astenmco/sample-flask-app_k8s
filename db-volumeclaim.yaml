@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: db-claim
+  labels:
+    app: backup-testing-sample-flask
+    component: db
+    kind: VolumeClaim
+    version: 0.1.0
+spec:
+  storageClassName: managed-nfs-storage
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 200Mi

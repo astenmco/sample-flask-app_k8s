@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db
+  namespace: backup-testing-sample-flask-app
+  labels:
+    app: backup-testing-sample-flask
+    component: db
+    kind: Deployment
+    version: 0.1.0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backup-testing-sample-flask
+      component: db
+  template:
+    metadata:
+      labels:
+        app: backup-testing-sample-flask
+        component: db
+        kind: Template
+    spec:
+      containers:
+      - name: sample-flask-app_db
+        image: astenmco/sample-flask-app_db:0.1.0
+        ports:
+          - containerPort: 5432
+        volumeMounts:
+        - name: db
+          mountPath: /var/lib/postgre
+      volumes:
+      - name: db
+        persistentVolumeClaim:
+          claimName: db-claim
