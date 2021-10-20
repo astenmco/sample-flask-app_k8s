@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: sample-flask-app-back
-        image: astenmco/sample-flask-app_back:0.2.0
+        image: astenmco/sample-flask-app_server:0.2.0
         ports:
           - containerPort: 5000
