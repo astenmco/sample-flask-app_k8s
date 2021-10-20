@@ -29,18 +29,18 @@ spec:
         volumeMounts:
         - name: db
           mountPath: /var/lib/postgre
-      env:
-        # Define the environment variable
-        - name: POSTGRES_USER
-          valueFrom:
-            configMapKeyRef:
-              name: db
-              key: user
-        - name: POSTGRES_PASSWORD
-          valueFrom:
-            configMapKeyRef:
-              name: db
-              key: password
+        env:
+          # Define the environment variable
+          - name: POSTGRES_USER
+            valueFrom:
+              configMapKeyRef:
+                name: db
+                key: user
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              configMapKeyRef:
+                name: db
+                key: password
       volumes:
       - name: db
         persistentVolumeClaim:
