@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db
+  namespace: backup-testing-sample-flask-app
+  labels:
+    app: backup-testing-sample-flask
+    component: db
+    kind: ConfigMap
+    version: 0.1.0
+data:
+  hostname: postgres
+  port: 5432
