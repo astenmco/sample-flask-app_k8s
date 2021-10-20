@@ -26,18 +26,18 @@ spec:
         image: astenmco/sample-flask-app_server:0.2.3
         ports:
           - containerPort: 5000
-      env:
-        - name: POSTGRES_USER
-          valueFrom:
-            secretKeyRef:
-              name: db
-              key: user
-        - name: POSTGRES_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: db
-              key: password
-        - name: FLASK_ENV
-          value: development
-        - name: APP_SETTINGS
-          value: project.config.DevelopmentConfig
+        env:
+          - name: POSTGRES_USER
+            valueFrom:
+              secretKeyRef:
+                name: db
+                key: user
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: db
+                key: password
+          - name: FLASK_ENV
+            value: development
+          - name: APP_SETTINGS
+            value: project.config.DevelopmentConfig
