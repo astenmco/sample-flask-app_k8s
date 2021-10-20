@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: front
+  namespace: backup-testing-sample-flask-app
+  labels:
+    app: backup-testing-sample-flask
+    component: front
+    kind: route
+    version: 0.1.0
+spec:
+  path: /
+  to:
+    kind: Service
+    name: front
+  port:
+    targetPort: 80
