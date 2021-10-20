@@ -30,7 +30,6 @@ spec:
         - name: db
           mountPath: /var/lib/postgresql
         env:
-          # Define the environment variable
           - name: POSTGRES_USER
             valueFrom:
               secretKeyRef:
