@@ -28,7 +28,7 @@ spec:
           - containerPort: 5432
         volumeMounts:
         - name: db
-          mountPath: /var/lib/postgre
+          mountPath: /var/lib/postgresql
         env:
           # Define the environment variable
           - name: POSTGRES_USER
@@ -45,4 +45,5 @@ spec:
       - name: db
         persistentVolumeClaim:
           claimName: db-claim
+
 
