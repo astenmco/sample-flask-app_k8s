@@ -37,6 +37,16 @@ spec:
               secretKeyRef:
                 name: db
                 key: password
+          - name: DB_HOSTNAME
+            valueFrom:
+              configMapKeyRef:
+                name: db
+                key: hostname
+          - name: DB_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: db
+                key: port
           - name: FLASK_ENV
             value: development
           - name: APP_SETTINGS
