@@ -10,7 +10,8 @@ metadata:
     version: 0.1.0
 spec:
   selector:
-    app: db
+    app: backup-testing-sample-flask
+    component: db
   type: ClusterIP
   ports:
     - name: postgres

@@ -10,7 +10,8 @@ metadata:
     version: 0.1.0
 spec:
   selector:
-    app: back
+    app: backup-testing-sample-flask
+    component: back
   type: NodePort
   ports:
     - name: rest
