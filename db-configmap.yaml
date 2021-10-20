@@ -10,4 +10,4 @@ metadata:
     version: 0.1.0
 data:
   hostname: postgres
-  port: 5432
+  port: "5432"
