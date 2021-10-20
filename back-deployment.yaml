@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: back
+  namespace: backup-testing-sample-flask-app
+  labels:
+    app: backup-testing-sample-flask
+    component: back
+    kind: Deployment
+    version: 0.1.0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backup-testing-sample-flask
+      component: back
+  template:
+    metadata:
+      labels:
+        app: backup-testing-sample-flask
+        component: back
+        kind: Template
+    spec:
+      containers:
+      - name: sample-flask-app-back
+        image: astenmco/sample-flask-app_back:0.2.0
+        ports:
+          - containerPort: 5000
