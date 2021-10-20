@@ -37,17 +37,6 @@ spec:
           secretKeyRef:
             name: db
             key: password
-
-      - name: POSTGRES_USER
-        valueFrom:
-          configMapKeyRef:
-            name: db
-            key: hostname
-      - name: POSTGRES_PASSWORD
-        valueFrom:
-          configMapKeyRef:
-            name: db
-            key: port
       - name: FLASK_ENV
         value: development
       - name: APP_SETTINGS
