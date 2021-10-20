@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+  namespace: backup-testing-sample-flask-app
+  labels:
+    app: backup-testing-sample-flask
+    component: db
+    kind: service
+    version: 0.1.0
+spec:
+  selector:
+    app: db
+  type: clusterIP
+  ports:
+    - name: postgres
+      protocol: TCP
+      port: 5432
+      targetPort: 5432
