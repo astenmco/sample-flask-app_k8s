@@ -26,3 +26,9 @@ spec:
         image: astenmco/sample-flask-app_client:0.1.0
         ports:
           - containerPort: 8080
+        env:
+          - name: ROOT_API
+            valueFrom:
+              configMapKeyRef:
+                name: front
+                key: root_api
