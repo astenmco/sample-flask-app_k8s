@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: sample-flask-app-client
-        image: astenmco/sample-flask-app_client:0.1.0
+        image: astenmco/sample-flask-app_client:0.1.1
         ports:
           - containerPort: 8080
         env:
