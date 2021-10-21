@@ -9,4 +9,5 @@ metadata:
     kind: ConfigMap
     version: 0.1.0
 data:
-  root_api: "http://back-backup-testing-sample-flask-app.apps.sand-4b7b.asten.maq:5000"
+  root_api: "http://back-backup-testing-sample-flask-app.apps.sand-4b7b.asten.maq"
+
